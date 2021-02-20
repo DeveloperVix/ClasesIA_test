@@ -333,10 +333,10 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 64
-  radiusDetection: 3
+  radiusDetection: 2.7
   sensorPosition: {fileID: 1739229240}
   targetDetected: 0
-  speedMovement: 5
+  speedRotation: 5
   timeIdle: 2
   angles:
   - {x: 0, y: 90, z: 0}
@@ -344,6 +344,8 @@ MonoBehaviour:
   - {x: 0, y: 270, z: 0}
   - {x: 0, y: 360, z: 0}
   angleIndex: 0
+  prefabBala: {fileID: 6960708091818809857, guid: 1be2f6aa82a5c6e4a8898a35e40cb390, type: 3}
+  canion: {fileID: 1474094184}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +536,7 @@ GameObject:
   - component: {fileID: 1180990649}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,7 +573,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ff4c44cd4bd8ba43a76ef6aae69dc8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -609,11 +611,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180990648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 3.78}
+  m_LocalPosition: {x: 0.012, y: 0.5, z: 3.823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1474094183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474094184}
+  m_Layer: 0
+  m_Name: Canion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1474094184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474094183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1538217415}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538217414
 GameObject:
@@ -644,7 +676,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.14200002, z: 0.949}
   m_LocalScale: {x: 0.37214, y: 0.41864, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1474094184}
   m_Father: {fileID: 557565738}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -30,6 +30,9 @@ public class AgenteEstatico : MonoBehaviour
     public Vector3[] angles;        //Un arreglo de vectores que guarda los angulos que debe pasar el agente
     public int angleIndex;          //Una variable para recorrer el arreglo uno por uno
 
+    public GameObject prefabBala;
+    public Transform canion;
+
 
     //Declaración de los estados que tendrá el agente para su ejecución
     public readonly IdleStaticState idleState = new IdleStaticState();
@@ -75,6 +78,11 @@ public class AgenteEstatico : MonoBehaviour
     {
         curState = state;
         curState.EnterState(this);
+    }
+
+    public void FireBullet()
+    {
+        Instantiate(prefabBala, canion.position, canion.rotation);
     }
 
     //Metodo para ejecutar corutinas y nos permitan ejecutar ciertos procesos en un cantidad de tiempo determinada,
