@@ -23,6 +23,8 @@ public class AgenteEstatico : MonoBehaviour
     public Transform sensorPosition;    //La posición del sensor
     public bool targetDetected = false; //Un variable con dos posibles valores para saber si esta en rango el taget
 
+    public GameObject targetObj;
+
     [Header("Elementos del agente")]
     public float speedRotation = 5f; //Velocidad de rotación
     public float timeIdle = 10f;      //Tiempo de espera
@@ -42,6 +44,8 @@ public class AgenteEstatico : MonoBehaviour
     // Este metodo se manda llamar cuando se ejecuta el proyecto
     void Start()
     {
+        targetObj = GameObject.FindGameObjectWithTag("Player");
+
         TransitionToState(idleState); //Su primer estado es el Idle
     }
 
