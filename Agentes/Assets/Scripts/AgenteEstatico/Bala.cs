@@ -9,7 +9,7 @@ public class Bala : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(this.gameObject, 5f);
     }
 
     // Update is called once per frame
@@ -23,7 +23,8 @@ public class Bala : MonoBehaviour
         if(obj.CompareTag("Player"))
         {
             Debug.Log("Impacto con el jugador");
+            //Funciones de bajar vida al jugador
             Destroy(this.gameObject);
-        }
+        }    
     }
 }
